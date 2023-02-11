@@ -1,0 +1,157 @@
+.book-detail {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  min-height: 100vh;
+}
+
+.book-detail > .top {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+.book-detail > .top > a {
+  text-transform: capitalize;
+  color: inherit;
+}
+
+.book-detail-one {
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  border-radius: 5px;
+  max-width: 1080px;
+  padding: 20px;
+  animation: fadeIn 1000ms ease-in-out 1;
+}
+
+.book-detail-one > .left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-detail-one > .left > img {
+  width: 320px;
+  height: 500px;
+  object-fit: cover;
+  box-shadow: var(--box-shadow);
+}
+
+.book-detail-one > .right {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.book-detail-one > .right > h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+.book-detail-one > .right > h2 > span {
+  margin-left: 5px;
+  font-size: 1.5rem;
+}
+
+.book-detail-one > .right > .author-name span {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.book-detail-one > .right > p {
+  font-weight: 500;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-detail-one > .right > .chips {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.book-detail-one > .right > .chips > span {
+  display: block;
+  text-transform: capitalize;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.book-detail-one > .right > .chips > .chips-inner {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.book-detail-one > .right > .chips > .chips-inner > a {
+  background-color: var(--dark-bg-color);
+  color: var(--light-font-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  animation: fadeIn 500ms ease-in-out 1;
+}
+
+.book-detail-one > .right > .chips > .chips-inner > button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 5px 10px;
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.book-detail-one > .right > .chips > .chips-inner > button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .book-detail-one {
+    flex-direction: column;
+    align-items: unset;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .book-detail {
+    gap: 40px;
+  }
+  .book-detail-one > .left > img {
+    width: 300px;
+    height: 470px;
+  }
+
+  .book-detail-one > .right > h2 {
+    font-size: 2rem;
+  }
+
+  .book-detail-one > .right > .author-name span {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .book-detail > .top {
+    font-size: 1rem;
+  }
+
+  .book-detail-one > .left > img {
+    width: 270px;
+    height: 430px;
+  }
+}

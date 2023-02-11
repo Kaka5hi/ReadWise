@@ -1,0 +1,22 @@
+.additional-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.additional-info > h2 {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+}
+
+.additional-info > .publishers {
+  background-color: var(--dark-bg-color);
+  color: var(--light-font-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: max-content;
+  animation: fadeIn 500ms ease-in-out 1;
+}

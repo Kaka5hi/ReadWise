@@ -1,0 +1,14 @@
+.subject-books-section {
+  padding: 20px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subject-books-section > .inner > .books {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-items: center;
+  gap: 15px;
+}

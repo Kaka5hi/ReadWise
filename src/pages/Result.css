@@ -1,0 +1,141 @@
+.no-result-section {
+  min-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  animation: fadeIn 500ms ease-in-out 1;
+}
+
+.no-result-section > p,
+.result-section > h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.no-result-section > p::first-letter {
+  text-transform: capitalize;
+}
+
+.no-result-section > a {
+  padding: 10px;
+  background-color: inherit;
+  color: inherit;
+  border: 1px solid rgb(118, 118, 118);
+  text-transform: capitalize;
+  font-weight: 500;
+  transition: 400ms ease-in-out;
+  border-radius: 5px;
+}
+
+.no-result-section > a:hover {
+  cursor: pointer;
+  background-color: inherit;
+  color: inherit;
+  transition: 400ms ease-in-out;
+}
+
+.result-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+.result-section > .top {
+  display: flex;
+  align-items: center;
+}
+
+.result-section > .top > h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.result-section > .top > h3 > button {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid rgb(118, 118, 118);
+  background-color: var(--light-bg-color);
+  color: var(--dark-font-color);
+  transition: 400ms ease-in-out;
+  display: flex;
+  align-items: center;
+}
+
+.result-section > .top > h3 > button > svg {
+  width: 20px;
+  height: 20px;
+}
+
+.result-section > .top > h3 > button:hover {
+  cursor: pointer;
+  background-color: var(--dark-bg-color);
+  color: var(--light-font-color);
+  transition: 400ms ease-in-out;
+}
+
+.result-section > .top > span {
+  margin-left: auto;
+  font-style: italic;
+}
+
+.result-section > .inner-main {
+  min-height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  place-items: center;
+  gap: 15px;
+}
+
+.result-section > .bottom {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.result-section > .bottom > .btns {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.result-section > .bottom > .btns button {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px;
+  background-color: var(--light-bg-color);
+  color: var(--dark-font-color);
+  border: 1px solid rgb(118, 118, 118);
+  text-transform: capitalize;
+  font-weight: 500;
+  transition: 400ms ease-in-out;
+  border-radius: 5px;
+}
+
+.result-section > .bottom > .btns button:hover {
+  cursor: pointer;
+  background-color: var(--dark-bg-color);
+  color: var(--light-font-color);
+  transition: 400ms ease-in-out;
+}
+
+@media screen and (max-width: 550px) {
+  .result-section > .top {
+    display: block;
+  }
+
+  .result-section > .bottom {
+    flex-direction: column;
+  }
+  .result-section > .bottom > .btns {
+    margin: unset;
+  }
+}

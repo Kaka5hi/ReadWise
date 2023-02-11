@@ -1,0 +1,76 @@
+.single-book {
+  width: 250px;
+  height: 350px;
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 4px,
+    rgba(0, 0, 0, 0.8) 0px 7px 10px -3px, rgba(0, 0, 0, 0.8) 0px -3px 0px inset;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  animation: fadeIn 1000ms ease-in-out 1;
+}
+
+.single-book > img {
+  width: 250px;
+  height: 350px;
+}
+
+.single-book > .details {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  color: white;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.5);
+  transform: translateY(100%);
+  transition: transform 400ms ease-in-out;
+}
+
+.single-book > .details > .title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 24px;
+  text-shadow: 4px 5px 5px rgb(0 0 0 / 56%);
+}
+
+.single-book > .details > .author {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 24px;
+  text-shadow: 4px 5px 5px rgb(0 0 0 / 56%);
+}
+
+.single-book > .details > .published {
+  font-weight: 400;
+  font-size: 1rem;
+  color: rgb(219, 219, 219);
+  font-style: italic;
+}
+
+.single-book > .details > a {
+  width: max-content;
+  margin: auto;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: transparent;
+  color: inherit;
+  border: 1px solid transparent;
+  text-transform: capitalize;
+  font-weight: 500;
+  transition: 200ms ease-in-out;
+}
+
+.single-book > .details > a:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 200ms ease-in-out;
+}
+
+.single-book:hover .details {
+  transform: translateY(0);
+  transition: transform 400ms ease-in-out;
+}

@@ -1,0 +1,10 @@
+.waiting-stats > article {
+  text-align: center;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  font-weight: 500;
+}

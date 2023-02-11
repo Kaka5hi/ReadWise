@@ -1,0 +1,44 @@
+.single-section {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.single-section-top {
+  display: flex;
+  align-items: center;
+}
+
+.single-section-top > h2 {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+.single-section-top > button {
+  margin-left: auto;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 10px;
+  background-color: var(--light-bg-color);
+  color: var(--dark-font-color);
+  border: 1px solid transparent;
+  text-transform: capitalize;
+  font-weight: 500;
+  transition: 400ms ease-in-out;
+}
+
+.single-section-top > button:hover {
+  cursor: pointer;
+  background-color: var(--dark-bg-color);
+  color: var(--light-font-color);
+  transition: 400ms ease-in-out;
+}
+
+.single-section-bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-items: center;
+  gap: 15px;
+}

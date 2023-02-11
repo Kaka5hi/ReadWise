@@ -1,0 +1,14 @@
+.search-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  min-height: 100vh;
+  margin-top: 10vh;
+  padding: 10px;
+}
+
+.search-page > p {
+  max-width: 500px;
+  align-self: center;
+}

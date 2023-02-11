@@ -1,0 +1,33 @@
+.intro-section {
+  margin: 30px auto;
+  max-width: 1440px;
+  padding: 20px;
+}
+
+.intro-section > .intro-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.intro-section > .intro-content > span {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.intro-section > .intro-content > p {
+  padding: 20px;
+  align-self: center;
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 800px;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+  .intro-section {
+    margin-block: 10px;
+  }
+}

@@ -1,0 +1,141 @@
+/* root */
+:root {
+  --box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  --light-bg-color: #ffffff;
+  --dark-bg-color: #000000;
+  --dark-font-color: #000000;
+  --light-font-color: #ffffff;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.light-mode {
+  color: black;
+  background-color: white;
+}
+
+.dark-mode {
+  background-color: rgb(4, 4, 22);
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transition: 500ms ease-in-out;
+  }
+  to {
+    opacity: 1;
+    transition: 500ms ease-in-out;
+  }
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--dark-bg-color);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.error > .msg {
+  margin: 20vh auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.error > .msg > p::first-letter {
+  text-transform: capitalize;
+}
+
+.error > .msg > a {
+  max-width: max-content;
+  align-self: center;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: inherit;
+  color: inherit;
+  border: 1px solid;
+  font-weight: 700;
+  transition: 400ms ease-in-out;
+  margin-top: 10px;
+}
+
+.error > .msg > a:hover {
+  background-color: var(--dark-bg-color);
+  color: var(--light-font-color);
+  transition: 400ms ease-in-out;
+}
+
+.footer {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  color: var(--light-font-color);
+  flex-wrap: wrap;
+  font-size: 1rem;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.5);
+  text-shadow: 4px 5px 5px rgb(0 0 0 / 56%);
+}
+.footer > h2 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer > ul {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.footer > ul svg {
+  font-size: 1.5rem;
+  color: inherit;
+}

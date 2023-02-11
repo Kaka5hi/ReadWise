@@ -1,0 +1,61 @@
+.rating {
+  position: relative;
+}
+
+.rating > .main {
+  position: relative;
+}
+
+.rating > .main > p {
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.rating > .main > p > span {
+  font-weight: 400;
+  text-transform: none;
+}
+
+.rating > .main > button {
+  font-family: inherit;
+  font-weight: 400;
+  background-color: inherit;
+  font-style: italic;
+  color: inherit;
+  border: none;
+  font-size: 1rem;
+  position: relative;
+}
+
+.rating > .main > button::first-letter {
+  text-transform: capitalize;
+}
+
+.rating > .main > button:hover {
+  cursor: pointer;
+}
+
+.rating > .count {
+  background-color: var(--dark-bg-color);
+  color: var(--light-font-color);
+  box-shadow: var(--box-shadow);
+  width: 100px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 25px;
+  left: 100px;
+}
+
+.rating > .count > .rating-count {
+  display: flex;
+  align-items: center;
+  padding: 2px 5px;
+  font-size: 1rem;
+}
+
+.rating > .count > .rating-count > span {
+  margin-left: auto;
+}

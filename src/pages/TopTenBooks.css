@@ -1,0 +1,14 @@
+.top-ten-book-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.top-ten-book-container > .inner-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-items: center;
+  row-gap: 20px;
+  column-gap: 15px;
+}

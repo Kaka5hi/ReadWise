@@ -1,0 +1,66 @@
+.shared-layout {
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.shared-layout-nav {
+  position: sticky;
+  z-index: 9999;
+  top: 0;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  backdrop-filter: blur(15px);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.nav-logo > a {
+  color: var(--light-font-color);
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1.75rem;
+  text-shadow: 4px 5px 5px rgb(0 0 0 / 56%);
+}
+
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.nav-links > a {
+  color: var(--light-font-color);
+  text-shadow: 4px 5px 5px rgb(0 0 0 / 56%);
+}
+
+.nav-links > button {
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 5px;
+  text-shadow: 4px 5px 5px rgb(0 0 0 / 56%);
+  border: none;
+  background-color: transparent;
+  color: var(--light-font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links > button:hover {
+  cursor: pointer;
+}
+
+.nav-links > button > svg {
+  transition: 400ms ease-in-out;
+  animation: fadeIn 500ms ease-in-out 1;
+}
