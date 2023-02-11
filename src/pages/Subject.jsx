@@ -30,7 +30,7 @@ const Subject = () => {
    
     const fetchSubject = async () => {
         try {
-            const res = await fetch(`http://openlibrary.org/subjects/${findWord}.json`)
+            const res = await fetch(`https://openlibrary.org/subjects/${findWord}.json`)
             const data = await res.json()
             setSubjectData(data)
             setIsFetching(false)
