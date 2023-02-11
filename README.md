@@ -2,7 +2,7 @@
 
 ReadWise is a web application that allows users to search for books based on title, author, and subject. With ReadWise, users can discover new books, get detailed information about books.
 
-<a href=''>Live here </a>
+<a href='https://readwise-book-library-app-sm.netlify.app/'>Live here </a>
 
 ## Features
 
