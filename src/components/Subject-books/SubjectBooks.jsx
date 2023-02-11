@@ -10,7 +10,7 @@ const SubjectBooks = ({ keyword }) => {
 
     const getBooksData = async (word) => {
         try {
-            const res = await fetch(`http://openlibrary.org/subjects/${word}.json?details=true`)
+            const res = await fetch(`http://openlibrary.org/subjects/${word}.json`)
             const data = await res.json()
             setSubData(data)
             setIsFetching(false)
