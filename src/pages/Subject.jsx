@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import {AiOutlineRight} from 'react-icons/ai'
 import SingleBook from '../components/Single-book/SingleBook'
 import './Subject.css'
+import Suggestions from '../components/Suggestions/Suggestions'
 
 const Subject = () => {
 
@@ -29,7 +30,7 @@ const Subject = () => {
    
     const fetchSubject = async () => {
         try {
-            const res = await fetch(`http://openlibrary.org/subjects/${findWord}.json?details=true`)
+            const res = await fetch(`http://openlibrary.org/subjects/${findWord}.json`)
             const data = await res.json()
             setSubjectData(data)
             setIsFetching(false)
@@ -65,7 +66,7 @@ const Subject = () => {
                 </div>
                 <div className="heading">
                     <h2 style={{ textAlign: 'center' }}>Explore books by subject or discover works by similar authors.</h2>
-                    <p>Books based on {param?.type} <span>E-books:{subjectData?.ebook_count}</span></p>
+                    <p>Books based on {param?.type}</p>
                 </div>
                 <div className="main-content">
                     {
@@ -73,34 +74,9 @@ const Subject = () => {
                     }
                 </div>
 
-                <div className='chips-outer-container'>
-                    <p>
-                        If you've enjoyed a book by a particular author, you can find other authors that write in a similar style with just a click of a button.
-                    </p>
-                    <h2>Similar authors</h2>
-                    <div className="chips-inner-container">
-                        {
-                            subjectData?.authors?.map((item, index) => {
-                                return (
-                                    <span key={index} >{item?.name}</span>
-                                )
-                            })
-                        }
-                    </div>
-                </div>
-
-                <div className='chips-outer-container'>
-                    <h2>Explore similar subjects</h2>
-                    <div className="chips-inner-container">
-                        {
-                            subjectData?.subjects?.map((item, index) => {
-                                return (
-                                    <Link to={`/subject/${item?.name}`} key={index} >{ item?.name}</Link>
-                                )
-                            })
-                        }
-                    </div>
-                </div>
+                {
+                    <Suggestions keyword={param?.type} />
+                }
             </div>
         )
     }
