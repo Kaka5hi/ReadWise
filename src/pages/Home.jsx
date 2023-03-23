@@ -8,9 +8,8 @@ import './Home.css'
 
 const Home = () => {
 
-    const [localSubject, setLocalSubject] = React.useState(['music', 'science fiction', 'fantasy', 'programming', 'history'])
-
-    const [otherSubject, setOtherSubject] = React.useState(['humor', 'thriller', 'fiction'])
+    const otherSubject = ['humor', 'thriller', 'fiction']
+    const localSubjects = ['music', 'science fiction', 'fantasy', 'programming', 'history']
 
     return (
         <div className='home-page'>
@@ -20,7 +19,7 @@ const Home = () => {
                 <h2>Explore books for popular Subjects</h2>
                 <div className="inner">
                     {
-                        localSubject?.map(item => <PreSubject key={item} keyword={ item}/>)
+                        localSubjects?.map(item => <PreSubject key={item} keyword={item}/>)
                     }
                 </div>
             </div>
