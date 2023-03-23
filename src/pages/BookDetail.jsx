@@ -11,7 +11,7 @@ import './BookDetail.css'
 
 const BookDetail = () => {
     
-    const param = useParams()
+    const param = new useParams()
     const [bookDetails, setBookDetails] = React.useState({})
     const [dataFetching, setDataFetching] = React.useState(true)
     const [showLess, setShowLess] = React.useState(true)
@@ -41,11 +41,11 @@ const BookDetail = () => {
 
     React.useEffect(() => {
         fetchBookDetails()
-        return (() => {
+        return () => {
             window.scrollTo(0, 0);
             setDataFetching(true)
             setShowLess(true)
-        })
+        }
     }, [param?.id])
     
     if (dataFetching) {
